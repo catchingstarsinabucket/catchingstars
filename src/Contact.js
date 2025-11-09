@@ -75,6 +75,15 @@ function Contact() {
 
       console.log('Email sent successfully');
 
+      // Track form submission in Google Analytics
+      if (window.gtag) {
+        window.gtag('event', 'form_submit', {
+          event_category: 'engagement',
+          event_label: 'Contact Form',
+          value: 'Contact Form'
+        });
+      }
+
       // Show success message
       setSubmitted(true);
       setIsSubmitting(false);
