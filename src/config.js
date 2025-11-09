@@ -2,28 +2,31 @@
 //
 // This file is SAFE to commit to git (no secrets hardcoded)
 //
-// Production (Vercel/Netlify):
+// Production (GitHub Pages/Vercel/Netlify):
 // - Reads from environment variables set in hosting dashboard
 //
 // Local Development:
-// - Option 1: Use .env file with REACT_APP_EMAILJS_* variables
-// - Option 2: Create config.local.js with your credentials (gitignored)
+// - Create config.local.js with your credentials (gitignored)
+// - Or use .env file with REACT_APP_EMAILJS_* variables
 //
 // Priority:
 // 1. config.local.js (if exists) - for local development
 // 2. Environment variables - for production
-// 3. Throws error if neither exists
 
 let localConfig = {};
 
-// Try to import local config if it exists (for development)
-try {
-  // This will fail in production (file doesn't exist), which is fine
-  localConfig = require('./config.local.js').default;
-  console.log('✓ Using local config from config.local.js');
-} catch (e) {
-  // No local config, will use environment variables
-  console.log('ℹ Using environment variables for EmailJS config');
+// Only try to load local config in development mode
+// This prevents webpack errors in production builds
+if (process.env.NODE_ENV === 'development') {
+  try {
+    // Dynamic import for development only
+    // eslint-disable-next-line import/no-webpack-loader-syntax
+    localConfig = require('./config.local.js').default || {};
+    console.log('✓ Using local config from config.local.js');
+  } catch (e) {
+    // No local config found - will use environment variables
+    console.log('ℹ No config.local.js found, using environment variables');
+  }
 }
 
 const config = {

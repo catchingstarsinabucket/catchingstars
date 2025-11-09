@@ -24,15 +24,6 @@ function Contact() {
     }
   };
 
-  const handleNavClick = (e, targetId) => {
-    e.preventDefault();
-    if (targetId.startsWith('/')) {
-      window.location.href = targetId;
-    } else {
-      scrollToSection(targetId);
-    }
-  };
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -75,7 +66,7 @@ function Contact() {
 
     try {
       // Send email using EmailJS
-      const response = await emailjs.send(
+      await emailjs.send(
         serviceId,
         templateId,
         templateParams,
