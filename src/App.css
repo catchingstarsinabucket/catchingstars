@@ -5,10 +5,12 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    line-height: 1.6;
-    color: #1a1a1a;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.179), 16px);
+    line-height: 1.65;
+    color: #1E1E1E;
     background-color: #fff;
+    font-weight: 400;
 }
 
 .site-wrapper {
@@ -35,19 +37,19 @@ body {
 }
 
 .site-title {
-    font-size: 1.75rem;
-    font-weight: 600;
+    font-size: clamp(20px, 1.25rem + ((1vw - 3.2px) * 0.5), 28px);
+    font-weight: 550;
     margin: 0;
 }
 
 .site-title a,
 .site-title a:visited {
     text-decoration: none;
-    color: #1a1a1a;
+    color: #1E1E1E;
 }
 
 .site-title a:hover {
-    color: #0066cc;
+    color: #1E1E1E;
 }
 
 .header-right {
@@ -65,14 +67,15 @@ body {
 .main-navigation a,
 .main-navigation a:visited {
     text-decoration: none;
-    color: #1a1a1a;
+    color: #1E1E1E;
     font-weight: 500;
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.179), 16px);
     transition: color 0.2s;
     cursor: pointer;
 }
 
 .main-navigation a:hover {
-    color: #0066cc;
+    color: #1E1E1E;
 }
 
 .mobile-menu-button {
@@ -92,20 +95,20 @@ body {
 }
 
 .learn-more-button {
-    padding: 0.75rem 1.5rem;
-    background-color: #0066cc;
+    padding: 16px 24px;
+    background-color: #1E1E1E;
     color: white;
     text-decoration: none;
-    border-radius: 4px;
-    font-weight: 500;
+    border-radius: 0;
+    font-weight: 450;
     transition: background-color 0.2s;
     cursor: pointer;
     border: none;
-    font-size: 1rem;
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.179), 16px);
 }
 
 .learn-more-button:hover {
-    background-color: #0052a3;
+    background-color: #000000;
 }
 
 /* Main Content */
@@ -127,16 +130,16 @@ body {
 }
 
 .hero-text h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: clamp(33.419px, 2.089rem + ((1vw - 3.2px) * 2.373), 60px);
+    font-weight: 500;
     margin-bottom: 1rem;
-    line-height: 1.2;
+    line-height: 1;
 }
 
 .hero-text p {
     margin-bottom: 1rem;
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.179), 16px);
+    line-height: 1.65;
 }
 
 .hero-image {
@@ -185,45 +188,55 @@ body {
 /* Author Section */
 .author-section {
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #FFFFFF;
 }
 
 .author-image {
     width: 175px;
     height: 175px;
-    border-radius: 50%;
+    border-radius: 9999px;
     object-fit: cover;
-    margin: 0 auto 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 0 auto 1.5rem;
+    display: block;
 }
 
 .author-section h2 {
-    font-size: 2rem;
+    font-size: clamp(33.419px, 2.089rem + ((1vw - 3.2px) * 2.373), 60px);
+    font-weight: 500;
     margin-bottom: 1.5rem;
-    color: #1a1a1a;
+    color: #1E1E1E;
+    line-height: 1;
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .author-section p {
-    max-width: 800px;
+    max-width: 460px;
     margin: 0 auto 2rem;
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.179), 16px);
+    line-height: 1.65;
+}
+
+.author-section .contact-button {
+    display: inline-block;
 }
 
 .contact-button,
 .contact-button:visited {
     display: inline-block;
-    padding: 0.75rem 2rem;
-    background-color: #0066cc;
+    padding: 16px 24px;
+    background-color: #1E1E1E;
     color: white;
     text-decoration: none;
-    border-radius: 4px;
-    font-weight: 500;
+    border-radius: 0;
+    font-weight: 450;
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.179), 16px);
     transition: background-color 0.2s;
 }
 
 .contact-button:hover {
-    background-color: #0052a3;
+    background-color: #000000;
 }
 
 /* Reviews Section */
@@ -232,8 +245,10 @@ body {
 }
 
 .reviews-section h2 {
-    font-size: 2rem;
+    font-size: clamp(33.419px, 2.089rem + ((1vw - 3.2px) * 2.373), 60px);
+    font-weight: 500;
     margin-bottom: 3rem;
+    line-height: 1;
 }
 
 .reviews-grid {
@@ -259,7 +274,8 @@ body {
 .review-card p {
     font-style: italic;
     margin-bottom: 1rem;
-    line-height: 1.7;
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.179), 16px);
+    line-height: 1.65;
 }
 
 .reviewer {
@@ -399,16 +415,18 @@ body {
 }
 
 .contact-heading {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: clamp(33.419px, 2.089rem + ((1vw - 3.2px) * 2.373), 60px);
+    font-weight: 500;
     margin-bottom: 1rem;
-    color: #1a1a1a;
+    color: #1E1E1E;
+    line-height: 1;
 }
 
 .contact-description {
-    font-size: 1.2rem;
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.179), 16px);
     color: #666;
     margin-bottom: 3rem;
+    line-height: 1.65;
 }
 
 .contact-form {
@@ -436,7 +454,8 @@ body {
     display: block;
     font-weight: 500;
     margin-bottom: 0.5rem;
-    color: #1a1a1a;
+    color: #1E1E1E;
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.179), 16px);
 }
 
 .form-field .required {
@@ -451,9 +470,9 @@ body {
     width: 100%;
     padding: 0.75rem 1rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-family: inherit;
+    border-radius: 0;
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.179), 16px);
+    font-family: 'Inter', sans-serif;
     transition: border-color 0.2s;
 }
 
@@ -474,19 +493,19 @@ body {
 }
 
 .submit-button {
-    padding: 0.75rem 3rem;
-    background-color: #0066cc;
+    padding: 16px 24px;
+    background-color: #1E1E1E;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: 500;
+    border-radius: 0;
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.179), 16px);
+    font-weight: 450;
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
 .submit-button:hover {
-    background-color: #0052a3;
+    background-color: #000000;
 }
 
 .submit-button:disabled {
@@ -509,25 +528,28 @@ body {
 }
 
 .contact-success h4 {
-    font-size: 1.75rem;
+    font-size: clamp(23.043px, 1.44rem + ((1vw - 3.2px) * 1.335), 38px);
+    font-weight: 500;
     margin-bottom: 1rem;
-    color: #1a1a1a;
+    color: #1E1E1E;
+    line-height: 1.2;
 }
 
 .contact-success p {
-    font-size: 1.1rem;
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.179), 16px);
     color: #666;
     margin-bottom: 2rem;
+    line-height: 1.65;
 }
 
 .go-back-button {
-    padding: 0.75rem 2rem;
-    background-color: #0066cc;
+    padding: 16px 24px;
+    background-color: #1E1E1E;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: 500;
+    border-radius: 0;
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.179), 16px);
+    font-weight: 450;
     cursor: pointer;
     transition: background-color 0.2s;
     text-decoration: none;
@@ -535,7 +557,7 @@ body {
 }
 
 .go-back-button:hover {
-    background-color: #0052a3;
+    background-color: #000000;
 }
 
 .contact-error {
