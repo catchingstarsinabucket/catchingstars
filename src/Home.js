@@ -116,7 +116,7 @@ function Home() {
                   className="purchase-button"
                 >
                   <img
-                    src="/images/amazon-button.png"
+                    src={`${process.env.PUBLIC_URL}/images/amazon-button.png`}
                     alt="Buy on Amazon"
                   />
                 </a>
@@ -127,7 +127,7 @@ function Home() {
                   className="purchase-button"
                 >
                   <img
-                    src="/images/flipkart-button.png"
+                    src={`${process.env.PUBLIC_URL}/images/flipkart-button.png`}
                     alt="Buy on Flipkart"
                     style={{ width: '150px' }}
                   />
@@ -139,7 +139,7 @@ function Home() {
                   className="purchase-button"
                 >
                   <img
-                    src="/images/ebook-button.png"
+                    src={`${process.env.PUBLIC_URL}/images/ebook-button.png`}
                     alt="Buy eBook"
                     style={{ width: '150px', height: '75px' }}
                   />
@@ -149,7 +149,7 @@ function Home() {
 
             <div className="hero-image">
               <img
-                src="/images/book-cover.jpg"
+                src={`${process.env.PUBLIC_URL}/images/book-cover.jpg`}
                 alt="Catching Stars In A Bucket book cover"
               />
             </div>
@@ -161,7 +161,7 @@ function Home() {
         {/* Author Section */}
         <section id="author" className="content-section author-section">
           <img
-            src="/images/author.jpg"
+            src={`${process.env.PUBLIC_URL}/images/author.jpg`}
             alt="Shivani Kumawat"
             className="author-image"
           />
